@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class AbstractFactory {
+public abstract class AbstractFactory {
+    public abstract AFShape getShape(String type);
 }

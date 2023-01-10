@@ -1,6 +1,6 @@
-public class AFRectangle implements Shape{
+public class RoundedRectangle implements AFShape{
     @Override
     public void draw() {
-        System.out.println("Inside Rectangle draw");
+        System.out.println("Inside Rounded Rectangle draw");
     }
 }

@@ -1,20 +1,13 @@
-public class RunAbstract {
+public class RunAbstractFactory {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
+        AbstractFactory rounded_producer = AFactoryProducer.getFactory(true);
+        rounded_producer.getShape("Square").draw();
+        rounded_producer.getShape("RECTANGLE").draw();
 
-        ShapeFactory factory = new ShapeFactory();
-
-        factory.getShape("Rectangle").draw();
-
-        factory.getShape("square").draw();
-
-        factory.getShape("CIRCLE").draw();
-
-        try{
-            factory.getShape("").draw();
-        } catch (NullPointerException e) {
-            System.err.println(e);
-        }
+        AbstractFactory shaped_producer = AFactoryProducer.getFactory(false);
+        shaped_producer.getShape("Square").draw();
+        shaped_producer.getShape("RECTANGLE").draw();
     }
 }
